@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".AddTransaction">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            >
+            <EditText
+                android:id="@+id/transaction_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Transaction Code"
+                android:inputType="text"
+                android:paddingTop="12dp"
+                android:visibility="gone"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:layout_below="@+id/transaction_code"
+                android:id="@+id/supplier_name"/>
+
+
+            <EditText
+                android:id="@+id/supplier_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Supplier Product Description"
+                android:inputType="text"
+                android:layout_below="@+id/supplier_name"
+                android:paddingTop="12dp"
+                />
+            <EditText
+                android:id="@+id/unitprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="UnitPrice"
+                android:inputType="numberDecimal"
+                android:layout_below="@+id/supplier_product_description"
+                android:paddingTop="12dp"
+                android:maxLength="5"
+                />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Amount"
+                android:inputType="numberDecimal"
+                android:layout_below="@+id/unitprice"
+                android:paddingTop="12dp"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:layout_below="@+id/amount"
+                android:id="@+id/transaction_type"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg"
+                android:layout_below="@+id/transaction_type"
+                android:paddingTop="12dp"
+                android:text="Record"/>
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

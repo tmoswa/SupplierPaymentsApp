@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="0dp"
+        >
+        <ImageView
+            android:id="@+id/horizontalline1"
+            android:src="@android:drawable/divider_horizontal_dark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="0dp"
+            android:background="@color/colorPrimary"
+            />
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_below="@+id/horizontalline1"
+            >
+
+            <TextView
+                android:id="@+id/supplier_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:paddingLeft="5dp"
+                android:text="Supplier Name"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/supplier_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:text="Deliveries - Payments"
+                android:layout_toRightOf="@+id/supplier_name"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/supplier_decription"
+                android:text="Balance"
+                android:layout_toRightOf="@+id/supplier_phone"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/horizontalline2"
+            android:src="@android:drawable/divider_horizontal_dark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/layout1"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontalline2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:context="com.google.samples.apps.sunflower.GardenActivity"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
